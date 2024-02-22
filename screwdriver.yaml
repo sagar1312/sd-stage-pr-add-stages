@@ -4,8 +4,10 @@ shared:
   steps:
     - init: echo 'init'
 jobs:
+  pr-job:
+    requires: [~pr]
   triggering-stage:
-    requires: [~pr, ~commit]
+    requires: [~commit]
   ci-deploy:
     requires: [ triggering-stage ]
   ci-test:
