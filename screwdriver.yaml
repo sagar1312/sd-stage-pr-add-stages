@@ -4,7 +4,7 @@ shared:
   steps:
     - init: echo 'init'
 jobs:
-  pr-job:
+  pull-req-job:
     requires: [~pr]
   triggering-stage:
     requires: [~commit]
